@@ -43,9 +43,6 @@ services:
     restart: always
     container_name: pterohosting-proxy
     env_file: ./.env.nginx
-    environment:
-      - VIRTUAL_HOST=${PTERO_DOMAIN:-hosting.yourdomain.com}
-      - VIRTUAL_PORT=80
     networks:
       - proxy
       - file-serving
