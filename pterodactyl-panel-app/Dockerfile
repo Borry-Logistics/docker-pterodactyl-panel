@@ -4,7 +4,7 @@ RUN apk add --no-cache \
         curl \
         tar
 RUN mkdir -p pterodactyl
-RUN curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/${pterodactyl_panel_version}/panel.tar.gz
+ADD https://github.com/pterodactyl/panel/releases/download/${pterodactyl_panel_version}/panel.tar.gz .
 RUN tar -xzvf panel.tar.gz -C /pterodactyl
 
 FROM php:8.2-fpm-alpine AS base_php
