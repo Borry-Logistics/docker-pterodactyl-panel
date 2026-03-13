@@ -15,6 +15,7 @@ RUN apk add --no-cache \
         unzip \
         libzip-dev \
         git \
+        mysql-client \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install -j$(nproc) bcmath \
