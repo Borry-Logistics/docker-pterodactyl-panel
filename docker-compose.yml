@@ -35,6 +35,8 @@ services:
       DB_DATABASE: ${DATABASE_NAME:-panel}
       DB_USERNAME: ${DATABASE_USER:-pterodactyl}
       DB_PASSWORD: ${DATABASE_PASSWORD:-thisisthepasswordforpterodactyl}
+      REDIS_HOST: ${REDIS_HOST:-cache}
+      REDIS_PORT: ${REDIS_PORT:-6379}
     networks:
       - file-serving
       - data-storage
